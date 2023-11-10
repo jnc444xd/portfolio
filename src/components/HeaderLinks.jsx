@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Header from './UI/Header';
 
-export default function Header() {
+export default function HeaderLinks() {
     return (
         <Header
             links={[

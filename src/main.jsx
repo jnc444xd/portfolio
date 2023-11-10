@@ -1,21 +1,23 @@
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
+import HomePage from './pages/HomePage';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
-        error: <Error />,
+        error: <ErrorPage />,
         children: [
             {
                 index: true,
-                element: <Home />,
+                element: <HomePage />,
             }
         ],
     },
 ]);
 
-ReactDom.createRoot(document.getElementById('root').render(
-    <RouterProvider router = { router } />
-));
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <RouterProvider router={router} />
+);

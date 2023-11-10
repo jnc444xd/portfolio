@@ -1,10 +1,14 @@
 import { Outlet } from 'react-router-dom';
+import HeaderLinks from './components/HeaderLinks';
 
 
 function App() {
     return (
         <>
-            <Header />
+            <HeaderLinks />
+            <main>
+                <Outlet />
+            </main>
         </>
     );
 }
