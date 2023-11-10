@@ -1,15 +1,23 @@
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 export default function Header({ links }) {
     return (
         <header>
-            <div className="name">
-                <h1>JUSTIN</h1>
-                <h2>CHUN</h2>
-            </div>
-            <div>
-                <ul>
-                    {links.map((link) => link)}
-                </ul>
-            </div>
+            <Container>
+                <Row>
+                    <Col sm={8}>
+                        <Row className="header-name">JUSTIN</Row>
+                        <Row className="header-name">CHUN</Row>
+                    </Col>
+                    <Col sm={4}>
+                        {links.map((link, index) => (
+                            <Row key={index}>{link}</Row>
+                        ))}
+                    </Col>
+                </Row>
+            </Container>
         </header>
     );
 }

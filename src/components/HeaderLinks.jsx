@@ -5,13 +5,13 @@ export default function HeaderLinks() {
     return (
         <Header
             links={[
-                <Link key={1} to="/about">
+                <Link key={1} to="/about" className="header-links">
                     ABOUT
                 </Link>,
-                <Link key={2} to="/work">
+                <Link key={2} to="/work" className="header-links">
                     WORK
                 </Link>,
-                <Link key={3} to="/contact">
+                <Link key={3} to="/contact" className="header-links">
                     CONTACT
                 </Link>,
             ]}
