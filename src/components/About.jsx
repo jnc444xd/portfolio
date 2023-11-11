@@ -1,13 +1,39 @@
+import { useEffect } from 'react';
 
 export default function About () {
 
+    useEffect(() => {
 
+        const cards = document.querySelectorAll(".card");
+
+        const callback = (cards) => {
+            cards.forEach(card => {
+                card.target.classList.toggle("show", card.isIntersecting)
+            })
+        };
+
+        const options = {
+            threshold: 1,
+            rootMargin: "0px 0px -200px 0px",
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+
+        cards.forEach(card => {
+            observer.observe(card)
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+
+    }, []);
 
     return (
         <main className="about-container">
             <section>
                 <div className="card">a little bit about myself</div>
-                <div className="about">I AM</div>
+                <div>I AM</div>
             </section>
             <section>
                 <div className="card">text</div>

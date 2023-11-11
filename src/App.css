@@ -28,11 +28,11 @@ header {
 .about-container section {
     display: flex;
     justify-content: space-between;
+    margin: 8vh;
 }
 
 .about-container section div:nth-child(2) {
     font-size: 5rem;
-    padding: 4vh;
     text-align: right;
     width: 60vw;
 }
@@ -43,6 +43,7 @@ header {
     transform: translateX(400px);
     opacity: 0;
     transition: 300ms;
+    font-size: 2rem;
 }
 
 .card.show {
