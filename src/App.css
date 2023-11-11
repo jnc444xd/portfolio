@@ -8,6 +8,11 @@ header {
     width: 100vw;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .header-name {
     font-size: 200px;
     color: rgba(0, 0, 0, 0);
@@ -37,7 +42,7 @@ header {
     width: 60vw;
 }
 
-.card {
+.about-card {
     background-color: rgb(247, 198, 106);
     border: 0px;
     transform: translateX(400px);
@@ -46,7 +51,23 @@ header {
     font-size: 2rem;
 }
 
-.card.show {
+.about-card.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-container section {
+    display: flex;
+    justify-content: space-between;
+    margin: 8vh;
+}
+
+.project-container section div:nth-child(1) {
+    font-size: 5rem;
+    width: 60vw;
 }
