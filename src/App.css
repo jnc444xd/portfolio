@@ -38,7 +38,7 @@ a {
 
 .slide-container {
     font-size: 4rem;
-    width: 30vw;
+    width: 50vw;
     text-align: right;
     overflow: hidden;
 }
@@ -90,6 +90,29 @@ a {
     opacity: 1;
     transform: translateX(0);
 }
+
+.contact-header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: auto;
+}
+
+.contact-form button {
+    width: 30%;
+    margin: auto;
+    margin-top: 4px;
+}
+
+.contact-form label, input, textarea {
+    margin: 4px;
+}
+
 
 @keyframes slideRight {
     from {

@@ -6,9 +6,49 @@ import employeeTracker from '../../images/employee-tracker.png';
 import codingQuiz from '../../images/coding-quiz.png';
 import techBlog from '../../images/tech-blog.png';
 
+const projectArr = [{
+    name: 'FitHub',
+    url: 'https://morning-ravine-18715-2df03199dbf8.herokuapp.com/',
+    alt: 'FitHub Screenshot',
+    img: {fitHub},
+},
+{
+    name: 'Travel Blog',
+    url: 'https://ramitaarora.github.io/travel-guide/',
+    alt: 'Travel Blog Screenshot',
+    img: {travelBlog},
+},
+{
+    name: 'Weather Dashboard',
+    url: 'https://jnc444xd.github.io/weather-dashboard/',
+    alt: 'Weather Dashboard Screenshot',
+    img: {weatherDashboard},
+},
+{
+    name: 'Employee Tracker',
+    url: 'https://github.com/jnc444xd/employee-tracker',
+    alt: 'Employee Tracker Screenshot',
+    img: {employeeTracker},
+},
+{
+    name: 'Coding Quiz Game',
+    url: 'https://jnc444xd.github.io/coding-quiz-game/',
+    alt: 'Coding Quiz Screenshot',
+    img: {codingQuiz},
+},
+{
+    name: 'Tech Blog',
+    url: 'https://grim-ghost-05578-d643ed2467b4.herokuapp.com/',
+    alt: 'Tech Blog Screenshot',
+    img: {techBlog},
+},
+];
+
 export default function Project() {
 
     useEffect(() => {
+
+        // Mouse hover
 
         const cards = document.querySelectorAll('.project-card');
 
@@ -27,39 +67,39 @@ export default function Project() {
     return (
         <main className="project-container">
             <section>
-                <a href="https://morning-ravine-18715-2df03199dbf8.herokuapp.com/" target="_blank">
-                    <div className="project-card">FitHub</div>
-                    <img src={fitHub} alt="FitHub Screenshot" className="project-img"></img>
+                <a href={projectArr[0].url} target="_blank">
+                    <div className="project-card">{projectArr[0].name}</div>
+                    <img src={fitHub} alt={projectArr[0].alt} className="project-img"></img>
                 </a>
             </section>
             <section>
-                <a href="https://ramitaarora.github.io/travel-guide/" target="_blank">
-                    <div className="project-card">Travel Blog</div>
-                    <img src={travelBlog} alt="Travel Blog Screenshot" className="project-img"></img>
+                <a href={projectArr[1].url} target="_blank">
+                    <div className="project-card">{projectArr[1].name}</div>
+                    <img src={travelBlog} alt={projectArr[1].alt} className="project-img"></img>
                 </a>
             </section>
             <section>
-                <a href="https://jnc444xd.github.io/weather-dashboard/" target="_blank">
-                    <div className="project-card">Weather Dashboard</div>
-                    <img src={weatherDashboard} alt="Weather Dashboard Screenshot" className="project-img"></img>
+                <a href={projectArr[2].url} target="_blank">
+                    <div className="project-card">{projectArr[2].name}</div>
+                    <img src={weatherDashboard} alt={projectArr[2].alt} className="project-img"></img>
                 </a>
             </section>
             <section>
-                <a href="https://github.com/jnc444xd/employee-tracker" target="_blank">
-                    <div className="project-card">Employee Tracker</div>
-                    <img src={employeeTracker} alt="Employee Tracker Screenshot" className="project-img"></img>
+                <a href={projectArr[3].url} target="_blank">
+                    <div className="project-card">{projectArr[3].name}</div>
+                    <img src={employeeTracker} alt={projectArr[3].alt} className="project-img"></img>
                 </a>
             </section>
             <section>
-                <a href="https://jnc444xd.github.io/coding-quiz-game/" target="_blank">
-                    <div className="project-card">Coding Quiz Game</div>
-                    <img src={codingQuiz} alt="Coding Quiz Game Screenshot" className="project-img"></img>
+                <a href={projectArr[4].url} target="_blank">
+                    <div className="project-card">{projectArr[4].name}</div>
+                    <img src={codingQuiz} alt={projectArr[4].alt} className="project-img"></img>
                 </a>
             </section>
             <section>
-                <a href="https://grim-ghost-05578-d643ed2467b4.herokuapp.com/login" target="_blank">
-                    <div className="project-card">Tech Blog</div>
-                    <img src={techBlog} alt="Tech Blog Screenshot" className="project-img"></img>
+                <a href={projectArr[5].url} target="_blank">
+                    <div className="project-card">{projectArr[5].name}</div>
+                    <img src={techBlog} alt={projectArr[5].alt} className="project-img"></img>
                 </a>
             </section>
         </main>

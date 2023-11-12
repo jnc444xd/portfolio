@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 
-export default function About () {
+export default function About() {
 
     useEffect(() => {
+
+        // Intersection Observer
 
         const cards = document.querySelectorAll('.about-card');
 
@@ -14,7 +16,7 @@ export default function About () {
 
         const options = {
             threshold: 1,
-            rootMargin: '0px 0px -150px 0px',
+            rootMargin: '0px 0px -200px 0px',
         };
 
         const observer = new IntersectionObserver(callback, options);
