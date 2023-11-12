@@ -4,17 +4,17 @@ export default function About () {
 
     useEffect(() => {
 
-        const cards = document.querySelectorAll(".about-card");
+        const cards = document.querySelectorAll('.about-card');
 
         const callback = (cards) => {
             cards.forEach(card => {
-                card.target.classList.toggle("show", card.isIntersecting)
+                card.target.classList.toggle('show', card.isIntersecting)
             })
         };
 
         const options = {
             threshold: 1,
-            rootMargin: "0px 0px -200px 0px",
+            rootMargin: '0px 0px -200px 0px',
         };
 
         const observer = new IntersectionObserver(callback, options);
@@ -33,7 +33,7 @@ export default function About () {
         <main className="about-container">
             <section>
                 <div className="about-card">a little bit about myself</div>
-                <div>I AM</div>
+                <div className="about-info">I AM</div>
             </section>
             <section>
                 <div className="about-card">text</div>
@@ -54,10 +54,6 @@ export default function About () {
             <section>
                 <div className="about-card">text</div>
                 <div>ASPIRATIONAL GRAPHIC DESIGNER</div>
-            </section>
-            <section>
-                <div className="about-card">text</div>
-                <div>INSPIRATIONAL HOOPER</div>
             </section>
         </main>
     )

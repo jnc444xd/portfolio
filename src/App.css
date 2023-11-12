@@ -61,13 +61,48 @@ a {
     flex-direction: column;
 }
 
-.project-container section {
+.project-container section a {
+    width: 90vw;
     display: flex;
     justify-content: space-between;
     margin: 8vh;
 }
 
-.project-container section div:nth-child(1) {
+.project-card {
     font-size: 5rem;
-    width: 60vw;
+}
+
+.project-card:hover {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 3px black;
+}
+
+.project-img {
+    width: 500px;
+    height: auto;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: 300ms;
+}
+
+.project-img.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+}
+
+.about-info:hover {
+    animation-name: slideRight;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
