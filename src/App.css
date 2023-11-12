@@ -36,10 +36,11 @@ a {
     margin: 8vh;
 }
 
-.about-container section div:nth-child(2) {
-    font-size: 5rem;
+.slide-container {
+    font-size: 4rem;
+    width: 30vw;
     text-align: right;
-    width: 60vw;
+    overflow: hidden;
 }
 
 .about-card {
@@ -98,11 +99,4 @@ a {
     to {
         transform: translateX(100%)
     }
-}
-
-.about-info:hover {
-    animation-name: slideRight;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
