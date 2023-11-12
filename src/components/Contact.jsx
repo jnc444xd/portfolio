@@ -8,9 +8,18 @@ export default function Contact() {
 
     // For now this only clears input fields
     const handleFormSubmit = () => {
-        setName('');
-        setEmail('');
-        setMessage('');
+
+        if (name && email) {
+            alert("Thanks! Will be in touch soon 😎");
+            setName('');
+            setEmail('');
+            setMessage('');
+            document.location.replace('/');
+        } else {
+            alert("Please enter name and email so I know who to contact 🥸");
+        }
+
+        
     }
 
     return (
@@ -22,7 +31,7 @@ export default function Contact() {
                 <label>Email</label>
                 <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}></input>
                 <label>Message</label>
-                <textarea id="contactMsg" rows="3" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                <textarea rows="3" value={message} placeholder="If you want to tell me more..." onChange={(e) => setMessage(e.target.value)}></textarea>
                 <button id="contactBtn" onClick={handleFormSubmit}>Let's Connect!</button>
             </section>
         </main>
