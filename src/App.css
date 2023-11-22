@@ -1,11 +1,20 @@
 * {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Oswald', sans-serif;
     background-color: rgb(247, 198, 106);
 }
 
 header {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
+}
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
 }
 
 a {
@@ -36,23 +45,30 @@ a {
     margin: 8vh;
 }
 
+.transparent {
+    opacity: 0.25;
+}
+
 .slide-container {
     font-size: 4rem;
-    width: 50vw;
+    width: 70vw;
     text-align: right;
     overflow: hidden;
 }
 
 .about-card {
-    background-color: rgb(247, 198, 106);
-    border: 0px;
+    /* background-color: rgb(247, 198, 106);
+    border: 0px; */
+    background-color: transparent;
     transform: translateX(400px);
     opacity: 0;
     transition: 300ms;
     font-size: 2rem;
+    width: 30vw;
 }
 
 .about-card.show {
+    background-color: transparent;
     opacity: 1;
     transform: translateX(0);
 }
@@ -66,7 +82,7 @@ a {
     width: 90vw;
     display: flex;
     justify-content: space-between;
-    margin: 8vh;
+    margin: 1rem;
 }
 
 .project-card {
@@ -113,6 +129,22 @@ a {
     margin: 4px;
 }
 
+#icon {
+    width: 200px;
+    height: 200px;
+    animation: rotate infinite 5s linear;
+}
+
+.scrollDiv {
+    height: 25vh;
+    width: 100vw;
+}
+
+/* #basketball-img {
+    width: 100px;
+    height: 100px;
+    transform: translate(calc(1% * var(--scroll) * 50), calc(1% * var(--scroll) * 10 * cos(var(--scroll) * -.25)));
+} */
 
 @keyframes slideRight {
     from {
@@ -121,5 +153,14 @@ a {
 
     to {
         transform: translateX(100%)
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import icon from '../../images/icon.png';
 
 export default function Contact() {
 
@@ -18,9 +19,11 @@ export default function Contact() {
         } else {
             alert("Please enter name and email so I know who to contact 🥸");
         }
+    };
 
-        
-    }
+    const handleHome = () => {
+        document.location.replace('/')
+    };
 
     return (
         <main>
@@ -33,6 +36,9 @@ export default function Contact() {
                 <label>Message</label>
                 <textarea rows="3" value={message} placeholder="If you want to tell me more..." onChange={(e) => setMessage(e.target.value)}></textarea>
                 <button id="contactBtn" onClick={handleFormSubmit}>Let's Connect!</button>
+            </section>
+            <section>
+                <img id="icon" src={icon} onClick={handleHome}></img>
             </section>
         </main>
     )
