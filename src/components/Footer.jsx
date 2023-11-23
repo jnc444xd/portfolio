@@ -11,7 +11,7 @@ export default function Footer() {
             <a href="https://stackoverflow.com/users/22904259/justin-c" target="_blank">
                 <img src={stack} alt="StackOverflow Logo"></img>
             </a>
-            <a href="https://www.linkedin.com/in/justin-undefined-32b08729b/" target="_blank">
+            <a href="https://www.linkedin.com/in/justin-chun-32b08729b/" target="_blank">
                 <img src={linkedin} alt="LinkedIn Logo"></img>
             </a>
         </footer>

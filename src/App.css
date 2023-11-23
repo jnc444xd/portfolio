@@ -23,7 +23,7 @@ a {
 }
 
 .header-name {
-    font-size: 200px;
+    font-size: 150px;
     color: rgba(0, 0, 0, 0);
     -webkit-text-stroke: 3px black;
 }
@@ -135,9 +135,26 @@ a {
     animation: rotate infinite 5s linear;
 }
 
+#icon:hover {
+    cursor: pointer;
+}
+
 .scrollDiv {
     height: 25vh;
     width: 100vw;
+}
+
+#profile-pic {
+    height: 300px;
+    width: auto;
+}
+
+.home-card:hover {
+    cursor: pointer;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* #basketball-img {

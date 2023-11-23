@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import icon from '../../images/icon.png';
-import car from '../../images/car.png';
 
 export default function About() {
 
@@ -78,7 +77,7 @@ export default function About() {
                 </div>
             </section>
             <section>
-                <div className="about-card">i was raised in atlanta</div>
+                <div className="about-card">raised in atlanta</div>
                 <div className="slide-container">
                     <div className="slide-about">NOW BASED IN LOS ANGELES</div>
                 </div>
@@ -98,12 +97,12 @@ export default function About() {
             <section>
                 <div className="about-card">simplicity is the greatest sophistication</div>
                 <div className="slide-container">
-                    <div className="slide-about">LOVER OF DRY CODE</div>
+                    <div className="slide-about">DRY CODE</div>
                 </div>
             </section>
             <section>
                 <div className="about-card">
-                    <div>my mother was an artist who showed me the power of a good picture</div>
+                    <div>mother was an artist</div>
                 </div>
                 <div className="slide-container">
                     <div className="slide-about">ASPIRATIONAL GRAPHIC DESIGNER</div>
@@ -115,10 +114,10 @@ export default function About() {
                     <div className="slide-about">WEEKEND WARRIOR</div>
                 </div>
             </section>
-            <section onClick={handleHome}>
+            <section className="home-card" onClick={handleHome}>
                 <div className="about-card">
                     <div>country roads,</div>
-                    <div>take me home,</div>
+                    <div>take me <span className="underline">home</span>,</div>
                     <div>to the place I belong...</div>
                 </div>
                 <img id="icon" src={icon}></img>
