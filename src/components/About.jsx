@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import icon from '../../images/icon.png';
 
 export default function About() {
 
@@ -46,14 +47,29 @@ export default function About() {
             container.addEventListener('mouseleave', stopAnimation);
         });
 
-        return () => {s
+        return () => {
             observer.disconnect();
         };
 
     }, []);
 
+    const handleHome = () => {
+        document.location.replace('/')
+    };
+
+    // const scrollVariable = () => {
+    //     const htmlEl = document.documentElement;
+    //     const scrollPercent = htmlEl.scrollTop / htmlEl.clientHeight;
+    //     htmlEl.style.setProperty('--scroll', Math.max((scrollPercent * 100) - 160, 0));
+    // }
+
+    // window.addEventListener('scroll', scrollVariable);
+    // window.addEventListener('resize', scrollVariable);
+
+    // scrollVariable();
+
     return (
-        <main className="about-container">
+        <div className="about-container">
             <section>
                 <div className="about-card">a little bit about myself</div>
                 <div className="slide-container">
@@ -61,41 +77,54 @@ export default function About() {
                 </div>
             </section>
             <section>
-                <div className="about-card">text</div>
+                <div className="about-card">raised in atlanta</div>
                 <div className="slide-container">
-                    <div className="slide-about">BASED IN LOS ANGELES</div>
+                    <div className="slide-about">NOW BASED IN LOS ANGELES</div>
                 </div>
             </section>
             <section>
-                <div className="about-card">text</div>
+                <div className="about-card">good design is obvious, great design is <span className="transparent">transparent</span></div>
                 <div className="slide-container">
                     <div className="slide-about">FRONT END ADDICTED</div>
                 </div>
             </section>
             <section>
-                <div className="about-card">text</div>
+                <div className="about-card">completed a full-stack coding bootcamp through UCLA</div>
                 <div className="slide-container">
                     <div className="slide-about">FULL STACK CAPABLE</div>
                 </div>
             </section>
             <section>
-                <div className="about-card">text</div>
+                <div className="about-card">simplicity is the greatest sophistication</div>
                 <div className="slide-container">
-                    <div className="slide-about">LOVER OF DRY CODE</div>
+                    <div className="slide-about">DRY CODE</div>
                 </div>
             </section>
             <section>
-                <div className="about-card">text</div>
+                <div className="about-card">
+                    <div>mother was an artist</div>
+                </div>
                 <div className="slide-container">
                     <div className="slide-about">ASPIRATIONAL GRAPHIC DESIGNER</div>
                 </div>
             </section>
             <section>
-                <div className="about-card">text</div>
+                <div className="about-card">if you're afraid to fail then you're probably going to fail</div>
                 <div className="slide-container">
-                    <div className="slide-about">PART-TIME HOOPER</div>
+                    <div className="slide-about">WEEKEND WARRIOR</div>
                 </div>
             </section>
-        </main>
+            <section className="home-card" onClick={handleHome}>
+                <div className="about-card">
+                    <div>country roads,</div>
+                    <div>take me <span className="underline">home</span>,</div>
+                    <div>to the place I belong...</div>
+                </div>
+                <img id="icon" src={icon}></img>
+            </section>
+            {/* <section className="scrollDiv">
+                <img id="basketball-img" src={basketball} alt="Basketball"></img>
+            </section> */}
+        </div>
     )
 }
